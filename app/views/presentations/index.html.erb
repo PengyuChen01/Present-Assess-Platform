@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>All Presentations</h1>
+
+<input type="text" id="presentationFilter" placeholder="Date Filter: YYYY-MM-DD">
+
+<div id="presentations">
+  <% @presentations.each do |presentation| %>
+    <%= render presentation %>
+    <p>
+      <%= link_to "Show this presentation", presentation %>
+    </p>
+  <% end %>
+
+</div>
+
